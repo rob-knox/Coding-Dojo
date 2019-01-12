@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            background-color: rgb(32, 168, 32);
+            margin-bottom: 0;
+        }
+        .display-4 {
+            text-align: center;
+            color: #fff;
+        }
+        table {
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
+        h1.welcome {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .align-right {
+            text-align: right;
+        }
+        .output {
+            height: auto;
+            width: 100%;
+            padding: 20px;
+        }
+        nav {
+            background-color: #efefef;
+            padding: 5px;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul a:link,
+        nav ul a:visited,
+        nav ul a:active {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul a:hover {
+            color:  rgb(32, 168, 32);
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Mongoose Dashboard</h1>
+        </div>
+    </div>
+    <nav>
+        <div class="container-fluid">
+            <div class="container">
+                <ul>
+                    <li><a href="/new">Add a new animal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="main">
+                    <div class="output">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Color</th>
+                                    <th>Favorite Snack</th>
+                                    <th>Age</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <% for (var i = 0; i < animal.length; i++) { %>
+                                <tr>
+                                    <td><a href="/animal/<%= animal[i].id %>"><%= animal[i].name %></a></td>
+                                    <td><%= animal[i].color %></td>
+                                    <td><%= animal[i].favorite_snack %></td>
+                                    <td><%= animal[i].age %></td>
+                                    <td><a href="/edit/<%= animal[i].id %>">Edit</a> <a href="/delete/<%= animal[i].id %>">Delete</a></td>
+                                </tr>
+                            <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

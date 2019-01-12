@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    margin-bottom: 40px;
+}
+table td {
+    padding: 5px;
+}
+h1.display-4 {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
+.jumbotron {
+    background-color: #007bff;
+    color: #fff;
+}

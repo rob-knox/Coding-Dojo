@@ -1,0 +1,15 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <body>
+        <h1>Details page for <%= dog.name %></h1>
+        <div class="container">
+            <img src="<%= dog.picture %>" alt="<%= dog.name %>">
+            <ul>
+                <li><strong>Favorite Food:</strong> <%= dog.favoriteFood %></li>
+                <li><strong>Age:</strong> <%= dog.age %></li>
+                <li><strong>Sleeping Spots:</strong> <%= dog.sleepingSpots %></li>
+            </ul>
+            <a href="/dogs">Back</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            background-color: lightblue;
+        }
+        .display-4 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
+        h1.welcome {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .align-right {
+            text-align: right;
+        }
+        .quoteAuthor {
+            text-align: center;
+        }
+        h4.quoteBody {
+            color: #333;
+        }
+        .output {
+            overflow: scroll;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Quoting Dojo</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="welcome">Here are the awesome quotes!</h1>
+                <div class="main">
+                    <!-- <h4>"I make lame jokes"</h4>
+                    <p class="align-center">-Rob at 8:56am November 8 2018</p>
+                    <h4>"D'oh!"</h4>
+                    <p class="align-center">-Homer Simpson at 8:56am November 8 2018</p>
+                    <h4>"To struggle is to learn."</h4>
+                    <p class="align-center">-Michael Choi at 8:56am November 8 2018</p>
+                    <a href="/" class="btn btn-primary">Back</a> -->
+                    <div class="output">
+                        <% for (var i = 0; i < quotes.length; i++) { %>
+                            <h4 class="quoteBody"><%= quotes[i].quote %></h4>
+                            <p class="quoteAuthor">-<%= quotes[i].name %> at <%= quotes[i].createdAt %></p>
+                        <% } %>
+                    </div>
+                    <a href="/" class="btn btn-info mt-4">Back</a>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            background-color: rgb(32, 168, 32);
+            margin-bottom: 0;
+        }
+        .display-4 {
+            text-align: center;
+            color: #fff;
+        }
+        table {
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
+        h1.welcome {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .align-right {
+            text-align: right;
+        }
+        .align-center {
+            text-align: center;
+        }
+        form {
+            text-align: center;
+        }
+        .output {
+            height: auto;
+            width: 100%;
+            padding: 20px;
+        }
+        nav {
+            background-color: #efefef;
+            padding: 5px;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul a:link,
+        nav ul a:visited,
+        nav ul a:active {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul a:hover {
+            color:  rgb(32, 168, 32);
+        }
+        ul.item {
+            list-style: none;
+            margin: 40px 0 0 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Mongoose Dashboard</h1>
+        </div>
+    </div>
+    <nav>
+        <div class="container-fluid">
+            <div class="container">
+                <ul>
+                    <li><a href="/">Show All Animals</a> | <a href="/new">Add new animal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <ul class="item">
+                    <form action="/animal/<%= animal.id %>" method="POST">
+                        <li><strong>Name:</strong> <%= animal.name %></li>
+                        <li><strong>Color:</strong> <%= animal.color %></li>
+                        <li><strong>Favorite Snack:</strong> <%= animal.favorite_snack %></li>
+                        <li><strong>Age:</strong> <%= animal.age %></li>
+                        <a href="/edit/<%= animal.id %>">Edit this animal</a>
+                    </form>
+                </ul>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

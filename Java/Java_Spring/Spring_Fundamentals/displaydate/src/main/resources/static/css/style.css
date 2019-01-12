@@ -1,0 +1,22 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+.container {
+	width: 605px;
+    margin: 0 auto;
+    padding-top: 200px;
+    display: block;
+}
+div {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+}
+.date {
+	color: lightblue;
+	text-align: center;
+}
+.time {
+	color: green;
+	text-align: center;
+}

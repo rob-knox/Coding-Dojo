@@ -1,0 +1,37 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+.container {
+	width: 800px;
+	margin: 0 auto;
+	display: block;
+}
+.container div.main {
+	padding-top: 100px;
+}
+p.error {
+	color: red;
+}
+p {
+	text-align: center;
+}
+form input {
+	border: 1px solid #ccc;
+	width: 200px;
+	height: 25px;
+	padding: 5px;
+	border-radius: 5px;
+	display: block;
+	margin: 10px auto;
+}
+form input.submitButton {
+	background-color: #00aeff;
+	padding: 8px 20px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	width: initial;
+	height: initial;
+	font-weight: bold;
+	cursor: pointer;
+}

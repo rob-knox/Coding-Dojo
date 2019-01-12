@@ -1,0 +1,9 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <body>
+        <h1>Dogs</h1>
+        <% for (var x in dog) { %>
+            <a href="/<%= dog[x].name %>"><img src="<%= dog[x].picture %>" alt="<%= dog[x].name %>"></a>
+        <% } %>
+    </body>
+</html>

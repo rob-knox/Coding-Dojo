@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Word Generator</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            padding: 15px;
+            border: 3px solid #000;
+        }
+        a {
+            background-color: #1cb2ee;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Random Word (attempt #{{request.session.count}})</p>
+    <h1>{{request.session.rand}}</h1>
+    <a href="/random_word/reset">Generate</a>
+</body>
+</html>

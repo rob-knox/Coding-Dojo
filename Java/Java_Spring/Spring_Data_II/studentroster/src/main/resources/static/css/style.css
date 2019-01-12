@@ -1,0 +1,36 @@
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+.container {
+	width: 800px;
+	margin: 0 auto;
+	display: block;
+}
+table {
+	width: 100%;
+}
+th {
+	padding: 10px;
+	background-color: green;
+	color: #fff;
+	width: auto;
+}
+td {
+	padding: 10px;
+}
+tr:nth-child(even) {
+	background-color: #e6e6e6 !important;
+	color: #000;
+}
+h1 {
+	display: inline-block;
+	text-align: left;
+}
+a.new {
+	background-color: #0098e0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
